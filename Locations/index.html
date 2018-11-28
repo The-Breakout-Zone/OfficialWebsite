@@ -140,11 +140,55 @@ body, html {
 </style>
      
     <title>Locations</title>
+	    <script>
+			var map;
+			function displayMap()
+			{
+				var location = new google.maps.LatLng( 39.5501, -105.7821 );
+				var options = { zoom: 7, center: location, mapTypeId: google.maps.MapTypeId.ROADMAP };
+				var map = new google.maps.Map( document.getElementById( 'map_canvas' ), options );
+				
+				var chatfield_location = new google.maps.LatLng( 39.5431, -105.0648 );
+				var chatfield_marker = new google.maps.Marker( { position: chatfield_location, map: map, title: "Chatfield"});
+				var chatfield_infoWindow = new google.maps.InfoWindow( { content: "<p>Our first location is located near Chatfield Reservoir which is very popular, so people can come in and grab a drink after a long day of exploring.</p>" });
+				google.maps.event.addListener( chatfield_marker, 'click', function() { chatfield_infoWindow.open( map, chatfield_marker );});
+				
+				var park_location = new google.maps.LatLng( 39.4283, -105.0703 );
+				var park_marker = new google.maps.Marker( { position: park_location, map: map, title: "Roxborough"});
+				var park_infoWindow = new google.maps.InfoWindow( { content: "<p>Roxborough State Park is really beautiful, so your taste buds should be able to join in on the beauty that your eyes are seeing with our juice.</p>" });
+				google.maps.event.addListener( park_marker, 'click', function() { park_infoWindow.open( map, park_marker );});
+
+				var mansion_location = new google.maps.LatLng( 39.5365, -104.9722 );
+				var mansion_marker = new google.maps.Marker( { position: mansion_location, map: map, title: "Highlands Ranch"});
+				var mansion_infoWindow = new google.maps.InfoWindow( { content: "<p>The Highlands Ranch Mansion is what some people may call thrilling, so shouldn't your mouth be thrilled, too? Shouldn't you have the energy to be thrilled? We believe that you should at Jumpin' Juice Company.</p>" });
+				google.maps.event.addListener( mansion_marker, 'click', function() { mansion_infoWindow.open( map, mansion_marker );});
+			}
+			
+			
+			function showPosition()
+			{
+				if( navigator.geolocation )
+					navigator.geolocation.getCurrentPosition( displayPosition, displayError );
+				else
+					alert( "Geolocation is not supported on this web browser" );
+			}
+			
+			function displayPosition( Position )
+			{
+				var message = "Latitude = " + Position.coords.latitude;
+				message += " Longitude = " + Position.coords.longitude;
+				message += " Accuracy = " + Position.coords.accuracy + " meters";
+				alert( message );
+			}
+			
+		</script>
     </head>
-     <body>
+     <body onload="displayMap()">
 <div class="sidenav1">
      <span style="font-size:30px;cursor:pointer;" onclick="openNav()" class="leftphase">&#9776;</span>  
 </div>
+	     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	     <div id="map_canvas" style="width: 640px; height:480px;" > </div>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <nav class="nav" role="navigation">
@@ -157,6 +201,7 @@ body, html {
     </ul>
   </nav>
 </div>
+
 <script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "100%";
@@ -164,6 +209,10 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+	
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap">
 </script>
 </body>
 </html>
