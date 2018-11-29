@@ -152,9 +152,9 @@ var map;
 			function displayMap()
 			{
 				var location = new google.maps.LatLng( 35.222, 101.8313);
-				var options = { zoom: 7, center: location, mapTypeId: google.maps.MapTypeId.ROADMAP };
+				var options = {center: location, mapTypeId: google.maps.MapTypeId.ROADMAP };
 				var map = new google.maps.Map( document.getElementById( 'map_canvas' ), options );
-function showPosition()
+			function showPosition()
 			{
 				if( navigator.geolocation )
 					navigator.geolocation.getCurrentPosition( displayPosition, displayError );
