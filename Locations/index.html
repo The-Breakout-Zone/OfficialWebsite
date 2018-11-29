@@ -207,7 +207,7 @@ var map;
 		    		var seattle_location = new google.maps.LatLng( 47.6062, 122.3321 );
 				var seattle_marker = new google.maps.Marker( { position: seattle_location, map: map, title: "Seattle"});
 				var seattle_infoWindow = new google.maps.InfoWindow( { content: "<p>Seattle</p>" });
-				google.maps.event.addListener( new_marker, 'click', function() { seattle_infoWindow.open( map, seattle_marker );});
+				google.maps.event.addListener( seattle_marker, 'click', function() { seattle_infoWindow.open( map, seattle_marker );});
 		    
 		    		var san_location = new google.maps.LatLng( 37.775, 122.4194 );
 				var san_marker = new google.maps.Marker( { position: san_location, map: map, title: "San Fransisco"});
