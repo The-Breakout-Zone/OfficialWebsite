@@ -140,10 +140,10 @@ body, html {
 	.leftphase {
 		padding-left: 10px;
 	}
-	
+	#map {position:absolute; top:0; bottom:0; width:0;}
 </style>
      
-    <title>Pocations</title>
+    <title>Jocations</title>
     </head>
      <body>
 <div class="sidenav1">
@@ -174,8 +174,8 @@ function closeNav() {
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW1vZ2h2YXJhbmFzaSIsImEiOiJjanAyeHVkN2kwYzY4M3dzMGd4bXkzZDJnIn0.6GMNYeva9c8HYIZT3tOgpg';
 var map = new mapboxgl.Map({
 	container: 'map',
-	style: 'mapbox://styles/mapbox/streets-v10'
-	center: [37.0902, -95.7129]
+	style: 'mapbox://styles/mapbox/streets-v9'
+	center: [-74.50, 40]
 	zoom: 5
 });
 map.addControl(new mapboxgl.NavigationControl());
