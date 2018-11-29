@@ -144,25 +144,61 @@ body, html {
 			var map;
 			function displayMap()
 			{
-				var location = new google.maps.LatLng( 39.5501, -105.7821 );
+				var location = new google.maps.LatLng( 35.222, 101.8313);
 				var options = { zoom: 7, center: location, mapTypeId: google.maps.MapTypeId.ROADMAP };
 				var map = new google.maps.Map( document.getElementById( 'map_canvas' ), options );
 				
-				var chatfield_location = new google.maps.LatLng( 39.5431, -105.0648 );
-				var chatfield_marker = new google.maps.Marker( { position: chatfield_location, map: map, title: "Chatfield"});
-				var chatfield_infoWindow = new google.maps.InfoWindow( { content: "<p>Our first location is located near Chatfield Reservoir which is very popular, so people can come in and grab a drink after a long day of exploring.</p>" });
-				google.maps.event.addListener( chatfield_marker, 'click', function() { chatfield_infoWindow.open( map, chatfield_marker );});
+				var denver_location = new google.maps.LatLng( 39.5501, 104.985);
+				var denver_marker = new google.maps.Marker( { position: denver_location, map: map, title: "Denver"});
+				var denver_infoWindow = new google.maps.InfoWindow( { content: "<p>Denver</p>" });
+				google.maps.event.addListener( denver_marker, 'click', function() { denver_infoWindow.open( map, denver_marker );});
 				
-				var park_location = new google.maps.LatLng( 39.4283, -105.0703 );
-				var park_marker = new google.maps.Marker( { position: park_location, map: map, title: "Roxborough"});
-				var park_infoWindow = new google.maps.InfoWindow( { content: "<p>Roxborough State Park is really beautiful, so your taste buds should be able to join in on the beauty that your eyes are seeing with our juice.</p>" });
-				google.maps.event.addListener( park_marker, 'click', function() { park_infoWindow.open( map, park_marker );});
-
-				var mansion_location = new google.maps.LatLng( 39.5365, -104.9722 );
-				var mansion_marker = new google.maps.Marker( { position: mansion_location, map: map, title: "Highlands Ranch"});
-				var mansion_infoWindow = new google.maps.InfoWindow( { content: "<p>The Highlands Ranch Mansion is what some people may call thrilling, so shouldn't your mouth be thrilled, too? Shouldn't you have the energy to be thrilled? We believe that you should at Jumpin' Juice Company.</p>" });
-				google.maps.event.addListener( mansion_marker, 'click', function() { mansion_infoWindow.open( map, mansion_marker );});
-			}
+				var washington_location = new google.maps.LatLng( 38.907, 77.037);
+				var washington_marker = new google.maps.Marker( { position: washington_location, map: map, title: "Washington"});
+				var washington_infoWindow = new google.maps.InfoWindow( { content: "<p>Washington DC</p>" });
+				google.maps.event.addListener( washington_marker, 'click', function() { washington_infoWindow.open( map, washington_marker );}); );})
+				
+				var kansas_location = new google.maps.LatLng( 30.1, 94.577);
+				var kansas_marker = new google.maps.Marker( { position: kansas_location, map: map, title: "Kansas"});
+				var kansas_infoWindow = new google.maps.InfoWindow( { content: "<p>Kansas</p>" });
+				google.maps.event.addListener( kansas_marker, 'click', function() { kansas_infoWindow.open( map, kansas_marker );});
+		    
+		    		var toronto_location = new google.maps.LatLng( 43.653, 79.383 );
+				var toronto_marker = new google.maps.Marker( { position: toronto_location, map: map, title: "Toronto"});
+				var toronto_infoWindow = new google.maps.InfoWindow( { content: "<p>Toronto</p>" });
+				google.maps.event.addListener( toronto_marker, 'click', function() { toronto_infoWindow.open( map, toronto_marker );});
+		   
+		    		var mexico_location = new google.maps.LatLng( 19.303, 99.151 );
+				var mexico_marker = new google.maps.Marker( { position: mexico_location, map: map, title: "Mexico City"});
+				var mexico_infoWindow = new google.maps.InfoWindow( { content: "<p>Mexico City</p>" });
+				google.maps.event.addListener( mexico_marker, 'click', function() { mexico_infoWindow.open( map, mexico_marker );});
+		    
+		    		var new_location = new google.maps.LatLng( 40.7128, 74.006 );
+				var new_marker = new google.maps.Marker( { position: new_location, map: map, title: "New York City"});
+				var new_infoWindow = new google.maps.InfoWindow( { content: "<p>New York City</p>" });
+				google.maps.event.addListener( new_marker, 'click', function() { new_infoWindow.open( map, new_marker );});
+		    
+		    		var seattle_location = new google.maps.LatLng( 47.6062, 122.3321 );
+				var seattle_marker = new google.maps.Marker( { position: seattle_location, map: map, title: "Seattle"});
+				var seattle_infoWindow = new google.maps.InfoWindow( { content: "<p>Seattle</p>" });
+				google.maps.event.addListener( new_marker, 'click', function() { seattle_infoWindow.open( map, seattle_marker );});
+		    
+		    		var san_location = new google.maps.LatLng( 37.775, 122.4194 );
+				var san_marker = new google.maps.Marker( { position: san_location, map: map, title: "San Fransisco"});
+				var san_infoWindow = new google.maps.InfoWindow( { content: "<p>San Fransisco</p>" });
+				google.maps.event.addListener( san_marker, 'click', function() { san_infoWindow.open( map, san_marker );});
+		    
+		    		var orlando_location = new google.maps.LatLng( 28.5383, 81.3792 );
+				var orlando_marker = new google.maps.Marker( { position: orlando_location, map: map, title: "Orlando"});
+				var orlando_infoWindow = new google.maps.InfoWindow( { content: "<p>Orlando</p>" });
+				google.maps.event.addListener( orlando_marker, 'click', function() { orlando_infoWindow.open( map, orlando_marker );});
+		    		
+		    		var chicago_location = new google.maps.LatLng( 41.8781, 87.627 );
+				var chicago_marker = new google.maps.Marker( { position: chicago_location, map: map, title: "Chicago"});
+				var chicago_infoWindow = new google.maps.InfoWindow( { content: "<p>Chicago</p>" });
+				google.maps.event.addListener( chicago_marker, 'click', function() { chicago_infoWindow.open( map, chicago_marker );});
+		    		
+		    }
 			
 			
 			function showPosition()
