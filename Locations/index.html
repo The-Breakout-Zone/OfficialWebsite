@@ -175,6 +175,10 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmx1ZWRnY2hlZXNlIiwiYSI6ImNqcDFyeTQ2ZDFid2wzb
 var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/mapbox/streets-v10'
+var map = L.map('map', {
+	center: [51.505, -0.09]
+	zoom: 13
+});
 });
 </script>
 </body>
