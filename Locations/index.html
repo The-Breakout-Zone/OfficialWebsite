@@ -5,8 +5,8 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" type="text/css" href="index.css">
-	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
 <link rel="icon" href="http://www.myiconfinder.com/uploads/iconsets/256-256-3d3b3c4f9781232ee75cfcb48acc71f6.png" type="image/gif" sizes="16x16">
 
 <style>
@@ -162,7 +162,7 @@ body, html {
   </nav>
 </div>
 <div style"margin-left:70px;">
-<div id='map' style='width: 1430px; height: 760px; margin-left:50px;'></div>
+<div id='map' style='width: 400px; height: 300px;'></div>
 </div>
 <script>
 function openNav() {
@@ -173,12 +173,9 @@ function closeNav() {
 }
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW1vZ2h2YXJhbmFzaSIsImEiOiJjanAyeHVkN2kwYzY4M3dzMGd4bXkzZDJnIn0.6GMNYeva9c8HYIZT3tOgpg';
 var map = new mapboxgl.Map({
-	container: 'map',
-	style: 'mapbox://styles/mapbox/streets-v9'
-	center: [-74.50, 40]
-	zoom: 5
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v10'
 });
-map.addControl(new mapboxgl.NavigationControl());
 </script>
 </body>
 </html>
