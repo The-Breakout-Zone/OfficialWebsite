@@ -178,6 +178,19 @@ function validateForm() {
         return false;
     }
 }
+
+function myFunction() {
+    var x, text;
+
+    x = document.getElementById("numb").value;
+
+    if (isNaN(x) || x < 100 || x > 900) {
+        text = "Input not valid";
+    } else {
+        text = "Your information has been sent!";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
 </script>
     <title>Book an Event</title>
     </head>
@@ -227,6 +240,11 @@ function validateForm() {
       Credit Card Expiration Date (mm/yy): <input type="text" name="troom">
       <input type="submit" value="Submit">
     </form>
+    Plan #:<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
 </div>
 		<br>
 		<br>
