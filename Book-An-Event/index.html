@@ -169,13 +169,6 @@ body, html {
   $( function() {
   $( "#datepicker" ).datepicker();
 } );
-function validateForm() {
-    var z = document.forms["herForm"]["vroom"].value;
-    if (z == "") {
-        alert("Please enter a valid answer");
-        return false;
-    }
-}
 function myFunction() {
     var tk, text;
 
@@ -240,12 +233,7 @@ function myFunction() {
       Escape Room (capitalization): <br><input type="text" name="room"><br>
     </form>
     <p>Date:<br><input type="text" id="datepicker"><br></p>
-    <form name="herForm"
-      onsubmit="return validateForm()" method="post">
-      Credit Card Number: <br><input type="text" name="vroom"><br>
-    </form>
-	<br>
-    CVV #:<br><input id="thumb">
+    Credit Card #:<br><input id="thumb">
 	<br>
     CVV #:<br><input id="numb"><br><br>
 
