@@ -147,7 +147,7 @@ body, html {
           return false;
       }
   }
-  function validatForm() {
+  function validateForm() {
       var x = document.forms["my1Form"]["lname"].value;
       if (x == "") {
           alert("Please enter a valid answer");
@@ -192,7 +192,7 @@ function myFunction() {
     document.getElementById("demo").innerHTML = text;
 }
 </script>
-    <title>Book an Evwent</title>
+    <title>Book an Event</title>
     </head>
      <body>
 <div class="sidenav1">
@@ -220,7 +220,7 @@ function myFunction() {
       <input type="submit" value="Submit">
     </form>
     <form name="my1Form"
-      onsubmit="return validatForm()" method="post">
+      onsubmit="return validateForm()" method="post">
       Last Name: <input type="text" name="lname">
       <input type="submit" value="Submit">
     </form>
@@ -240,7 +240,7 @@ function myFunction() {
       Credit Card Expiration Date (mm/yy): <input type="text" name="troom">
       <input type="submit" value="Submit">
     </form>
-    Plan #:<input id="numb">
+    CVV #:<input id="numb">
 
 <button type="button" onclick="myFunction()">Submit</button>
 
