@@ -6,6 +6,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" type="text/css" href="index.css">
 <link rel="icon" href="http://www.myiconfinder.com/uploads/iconsets/256-256-3d3b3c4f9781232ee75cfcb48acc71f6.png" type="image/gif" sizes="16x16">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
@@ -105,13 +109,11 @@ body, html {
       nav li:nth-of-type(3){background-color: #c0c0c0}
       nav li:nth-of-type(3):hover{
 	 background-color: rgb(240,60,60);
-
       }
       nav li:nth-of-type(4){background-color: #999999}
       nav li:nth-of-type(4):hover{
 	 background-color: rgb(240,60,60);
       }
-
       nav li:nth-of-type(5){background-color: #000000}
       nav li:nth-of-type(5):hover{
 	  background-color: rgb(240,60,60);
@@ -124,7 +126,6 @@ body, html {
           font-weight: bold;
           color:white;
 	}
-
 	.a {
 	    flex-basis: 20%;
             justify-content: center;
@@ -133,12 +134,51 @@ body, html {
             padding-bottom: 100%;
 	    overflow: hidden;
 	  }
-
 	.leftphase {
 		padding-left: 10px;
 	}
-</style>
 
+</style>
+<script>
+  function validateForm() {
+      var x = document.forms["myForm"]["fname"].value;
+      if (x == "") {
+          alert("Please enter your first name");
+          return false;
+      }
+  }
+  function validateForm() {
+      var x = document.forms["my1Form"]["lname"].value;
+      if (x == "") {
+          alert("Please enter your last name");
+          return false;
+      }
+  }
+  function validateForm() {
+      var x = document.forms["hisForm"]["room"].value;
+      if (x != "Escape from Egypt" || "Race Against Time" || "Limited Life") {
+          alert("Please select which room you would like to attend");
+          return false;
+      }
+  }
+  $( function() {
+  $( "#datepicker" ).datepicker();
+} );
+function validateForm() {
+    var x = document.forms["herForm"]["vroom"].value;
+    if (x == "") {
+        alert("Please enter your credit card number");
+        return false;
+    }
+}
+function validateForm() {
+    var x = document.forms["theirForm"]["troom"].value;
+    if (x == "") {
+        alert("Please enter you credit card expiration date");
+        return false;
+    }
+}
+</script>
     <title>Book an Event</title>
     </head>
      <body>
@@ -159,7 +199,43 @@ body, html {
 </div>
 <div class="container" style="margin-left:50px">
 	<h1 style="margin-left:75px">Book an Event</h1>
-		<br>
+
+<div style="margin-left:80px">
+    <form name="myForm"
+      onsubmit="return validateForm()" method="post">
+      First Name: <input type="text" name="fname">
+      <input type="submit" value="Submit">
+    </form>
+    <form name="my1Form"
+      onsubmit="return validateForm()" method="post">
+      Last Name: <input type="text" name="lname">
+      <input type="submit" value="Submit">
+    </form>
+    <form name="hisForm"
+      onsubmit="return validateForm()" method="post">
+      Escape Room(capitalization): <input type="text" name="room">
+      <input type="submit" value="Submit">
+    </form>
+    <p>Date: <input type="text" id="datepicker"></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form name="herForm"
+      onsubmit="return validateForm()" method="post">
+      Credit Card Number: <input type="text" name="vroom">
+      <input type="submit" value="Submit">
+    </form>
+    <form name="theirForm"
+      onsubmit="return validateForm()" method="post">
+      Credit Card Expiration Date (mm/yy): <input type="text" name="troom">
+      <input type="submit" value="Submit">
+    </form>
+</div>
 		<br>
 		<br>
 		<br>
