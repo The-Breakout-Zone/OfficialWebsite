@@ -174,7 +174,7 @@ function myFunction() {
 
     tk = document.getElementById("thumb").value;
 
-    if (isNaN(tk) || 1000000000000000 < 100 || n > 9999999999999999) {
+    if (isNaN(tk) || 1000000000000000 < n || n > 9999999999999999) {
         text = "Please enter a valid answer";
     } else {
         text = "The tickets are yours! Enjoy your experience with The Breakout Zone!";
@@ -238,7 +238,10 @@ function myFunction() {
     CVV #:<br><input id="numb"><br><br>
 
 <button type="button" onclick="myFunction()">Submit</button>
-
+<br>
+<br>
+<br>
+<br>
 <p id="demo"></p>
 </div>
 </div>
