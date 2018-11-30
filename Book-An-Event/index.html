@@ -143,21 +143,21 @@ body, html {
   function validateForm() {
       var x = document.forms["myForm"]["fname"].value;
       if (x == "") {
-          alert("Please enter your first name");
+          alert("Please enter a valid answer");
           return false;
       }
   }
-  function validateForm(1) {
+  function validateForm() {
       var x = document.forms["my1Form"]["lname"].value;
       if (x == "") {
-          alert("Please enter your last name");
+          alert("Please enter a valid answer");
           return false;
       }
   }
   function validateForm() {
       var x = document.forms["hisForm"]["room"].value;
       if (x == "") {
-          alert("Please select which room you would like to attend");
+          alert("Please enter a valid answer");
           return false;
       }
   }
@@ -167,14 +167,14 @@ body, html {
 function validateForm() {
     var x = document.forms["herForm"]["vroom"].value;
     if (x == "") {
-        alert("Please enter your credit card number");
+        alert("Please enter a valid answer");
         return false;
     }
 }
 function validateForm() {
     var x = document.forms["theirForm"]["troom"].value;
     if (x == "") {
-        alert("Please enter you credit card expiration date");
+        alert("Please enter a valid answer");
         return false;
     }
 }
@@ -207,7 +207,7 @@ function validateForm() {
       <input type="submit" value="Submit">
     </form>
     <form name="my1Form"
-      onsubmit="return validateForm(1)" method="post">
+      onsubmit="return validateForm()" method="post">
       Last Name: <input type="text" name="lname">
       <input type="submit" value="Submit">
     </form>
