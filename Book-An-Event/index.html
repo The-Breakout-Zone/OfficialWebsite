@@ -147,7 +147,7 @@ body, html {
           return false;
       }
   }
-  function validateForm() {
+  function validateForm(1) {
       var x = document.forms["my1Form"]["lname"].value;
       if (x == "") {
           alert("Please enter your last name");
@@ -156,7 +156,7 @@ body, html {
   }
   function validateForm() {
       var x = document.forms["hisForm"]["room"].value;
-      if (x != "Escape from Egypt" || "Race Against Time" || "Limited Life") {
+      if (x == "") {
           alert("Please select which room you would like to attend");
           return false;
       }
@@ -207,7 +207,7 @@ function validateForm() {
       <input type="submit" value="Submit">
     </form>
     <form name="my1Form"
-      onsubmit="return validateForm()" method="post">
+      onsubmit="return validateForm(1)" method="post">
       Last Name: <input type="text" name="lname">
       <input type="submit" value="Submit">
     </form>
