@@ -1,130 +1,142 @@
-<!DOCTYPE html>
-<html>
-  <head>
- <title>Breakout Zone</title>
-    <link rel="stylesheet" type="text/css" href="animate.css">
-    <link rel="stylesheet" type="text/css" href="music.css">
-    <script src="jquery.js"></script>
-    <script src="index.js"></script>
-    <style>
+  <!DOCTYPE html>
+  <html>
+    <head>
+   <title>Breakout Zone</title>
+      <link rel="stylesheet" type="text/css" href="animate.css">
+      <link rel="stylesheet" type="text/css" href="music.css">
+      <script src="jquery.js"></script>
+      <script src="index.js"></script>
+      <style>
+      @import url('https://fonts.googleapis.com/css?family=Raleway');
+        body, html{
+          margin:0;
+          padding:0;
+          width: 100%;
+          height: 100%;
+        }
+        .nav, nav ul{
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+            text-align:center;
+        }
+        .li{
+          flex-basis: 20%;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          overflow: hidden;
+        }
+        nav li:nth-of-type(1){background-color: #000000}
+        nav li:nth-of-type(1):hover{
+  	background-color: rgb(240,60,60);
+  	    background-image: url(Background.png);
+      background-size: 400px;
+      background-repeat:no-repeat;
+      background-position: center;
+        }
+        nav li:nth-of-type(2){background-color: #999999}
+        nav li:nth-of-type(2):hover{
+  	 background-color: rgb(240,60,60);
+  	     background-image: url(Background.png);
+      background-size: 400px;
+      background-repeat:no-repeat;
+      background-position: center;
+        }
+        nav li:nth-of-type(3){background-color: #c0c0c0}
+        nav li:nth-of-type(3):hover{
+  	 background-color: rgb(240,60,60);
+  	     background-image: url(Background.png);
+      background-size: 400px;
+      background-repeat:no-repeat;
+      background-position: center;
+        }
+        nav li:nth-of-type(4){background-color: #999999}
+        nav li:nth-of-type(4):hover{
+  	 background-color: rgb(240,60,60);
+      background-image: url(Background.png);
+      background-size: 400px;
+      background-repeat:no-repeat;
+      background-position: center;
+        }
 
-    @import url('https://fonts.googleapis.com/css?family=Raleway');
-      body, html{
-        margin:0;
-        padding:0;
-        width: 100%;
-        height: 100%;
-      }
-      .nav, nav ul{
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-      }
-      nav ul{
-          display: flex;
-          list-style: none;
-          text-align:center;
-      }
-      .li{
-        flex-basis: 20%;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        overflow: hidden;
-      }
-      nav li:nth-of-type(1){background-color: #000000}
-      nav li:nth-of-type(1):hover{
-	background-color: rgb(240,60,60);
-	    background-image: url(Background.png);
-    background-size: 400px;
-    background-repeat:no-repeat;
-    background-position: center;
-      }
-      nav li:nth-of-type(2){background-color: #999999}
-      nav li:nth-of-type(2):hover{
-	 background-color: rgb(240,60,60);
-	     background-image: url(Background.png);
-    background-size: 400px;
-    background-repeat:no-repeat;
-    background-position: center;
-      }
-      nav li:nth-of-type(3){background-color: #c0c0c0}
-      nav li:nth-of-type(3):hover{
-	 background-color: rgb(240,60,60);
-	     background-image: url(Background.png);
-    background-size: 400px;
-    background-repeat:no-repeat;
-    background-position: center;
-      }
-      nav li:nth-of-type(4){background-color: #999999}
-      nav li:nth-of-type(4):hover{
-	 background-color: rgb(240,60,60);
-    background-image: url(Background.png);
-    background-size: 400px;
-    background-repeat:no-repeat;
-    background-position: center;
-      }
-	     
-      nav li:nth-of-type(5){background-color: #000000}
-      nav li:nth-of-type(5):hover{
-	  background-color: rgb(240,60,60);
-    background-image: url(Background.png);
-    background-size: 400px;
-    background-repeat:no-repeat;
-    background-position: center;
-      }
-      ul li a{
-          position: relative;
-          top: 48%;
-          text-decoration:none;
-          font-family: 'Raleway', sans-serif;
-          font-weight: bold;
-          color:white;
-	}
-	    
-	.a {
-	    flex-basis: 20%;
-            justify-content: center;
-            align-items: center;
-            padding-top: 100%;
-            padding-bottom: 100%;
-	    overflow: hidden;
-	  }
-	.BigTitle{
-	font-family: 'Raleway', sans-serif;
-	font-weigth: bold; 
-	font-size: 3em;
-	background-color: rgb(0,0,0);
-	color:white;
-	text-align: center;
-	    }
-	
-    </style>
-	<link rel="icon" href="http://www.myiconfinder.com/uploads/iconsets/256-256-3d3b3c4f9781232ee75cfcb48acc71f6.png" type="image/gif" sizes="16x16">
-  </head>
-  <body>
-	  <div class="BigTitle">The Breakout Zone</div>
-  <nav class="nav" role="navigation">
-    <ul class="slideInDown animated">
-      <li class="li"><a href="https://the-breakout-zone.github.io/OfficialWebsite/About/index.html" class="nav-items a">About</a></li>
-      <li class="li"><a href="https://the-breakout-zone.github.io/OfficialWebsite/Background/index.html" class="nav-item2 a">Information</a></li>
-      <li class="li"><a href="https://the-breakout-zone.github.io/OfficialWebsite/The-Room/index.html" class="nav-item3 a">Inside The Rooms</a></li>
-      <li class="li"><a href="https://the-breakout-zone.github.io/OfficialWebsite/Locations/index.html" class="nav-item4 a">Locations</a></li>
-      <li class="li"><a href="https://the-breakout-zone.github.io/OfficialWebsite/Book-An-Event/index.html" class="nav-item5 a">Book an Event</a></li
-    </ul>
-  </nav>
-    <a style="position:fixed;">
-<div class="">
-	<audio id="backgroundaudio"style="display:none;" autoplay loop><source src="videoplayback.mp4" type="audio/mpeg"></audio>
-	<div class="line-c">
-    	<div id="line-1" class="line"></div>
-    	<div id="line-2" class="line"></div>
-    	<div id="line-3" class="line"></div>
-    	<div id="line-4" class="line"></div>
-    	<div id="line-5" class="line"></div>
-	</div>
-</div>
-</a>
-  </body>
-</html>
+        nav li:nth-of-type(5){background-color: #000000}
+        nav li:nth-of-type(5):hover{
+  	  background-color: rgb(240,60,60);
+      background-image: url(Background.png);
+      background-size: 400px;
+      background-repeat:no-repeat;
+      background-position: center;
+        }
+        ul li a{
+            position: relative;
+            top: 48%;
+            text-decoration:none;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+            color:white;
+  	}
+
+  	.a {
+  	    flex-basis: 20%;
+              justify-content: center;
+              align-items: center;
+              padding-top: 100%;
+              padding-bottom: 100%;
+  	    overflow: hidden;
+  	  }
+  	.BigTitle{
+  	font-family: 'Raleway', sans-serif;
+  	font-weigth: bold;
+  	font-size: 3em;
+  	background-color: rgb(0,0,0);
+  	color:white;
+  	text-align: center;
+  	    }
+
+  #blink{
+    animation:blinkingText 2s infinite;
+  }
+
+  @keyframes blinkingText{
+    0%{color:white}
+    90%{color:transparent}
+    91%{color: transparent;}
+      93%{color:lightgrey;}
+      99%{color:white}
+      100%{color: #000;}
+  }
+
+      </style>
+  	<link rel="icon" href="http://www.myiconfinder.com/uploads/iconsets/256-256-3d3b3c4f9781232ee75cfcb48acc71f6.png" type="image/gif" sizes="16x16">
+    </head>
+    <body>
+  	  <div class="BigTitle">The Breakout Zone</div>
+    <nav class="nav" role="navigation">
+      <ul class="slideInDown animated">
+        <li class="li"><a href="https://the-breakout-zone.github.io/OfficialWebsite/About/index.html" class="nav-items a">About</a></li>
+        <li class="li"><a href="https://the-breakout-zone.github.io/OfficialWebsite/Background/index.html" class="nav-item2 a">Information</a></li>
+        <li class="li"><a href="https://the-breakout-zone.github.io/OfficialWebsite/The-Room/index.html" class="nav-item3 a" id="blink">Inside The Rooms</a></li>
+        <li class="li"><a href="https://the-breakout-zone.github.io/OfficialWebsite/Locations/index.html" class="nav-item4 a">Locations</a></li>
+        <li class="li"><a href="https://the-breakout-zone.github.io/OfficialWebsite/Book-An-Event/index.html" class="nav-item5 a">Book an Event</a></li
+      </ul>
+    </nav>
+      <a style="position:fixed;">
+  <div class="">
+  	<audio id="backgroundaudio"style="display:none;" autoplay loop><source src="videoplayback.mp4" type="audio/mpeg"></audio>
+  	<div class="line-c">
+      	<div id="line-1" class="line"></div>
+      	<div id="line-2" class="line"></div>
+      	<div id="line-3" class="line"></div>
+      	<div id="line-4" class="line"></div>
+      	<div id="line-5" class="line"></div>
+  	</div>
+  </div>
+  </a>
+    </body>
+  </html>
