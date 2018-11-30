@@ -176,12 +176,17 @@ function validateForm() {
         return false;
     }
 }
-function validateForm() {
-    var tk = document.forms["theirForm"]["troom"].value;
-    if (tk == "") {
-        alert("Please enter a valid answer");
-        return false;
+function myFunction() {
+    var tk, text;
+
+    tk = document.getElementById("thumb").value;
+
+    if (isNaN(tk) || 1000000000000000 < 100 || n > 9999999999999999) {
+        text = "Please enter a valid answer";
+    } else {
+        text = "The tickets are yours! Enjoy your experience with The Breakout Zone!";
     }
+    document.getElementById("demo").innerHTML = text;
 }
 
 function myFunction() {
@@ -189,7 +194,7 @@ function myFunction() {
 
     n = document.getElementById("numb").value;
 
-    if (isNaN(n) || n < 100 || n > 900) {
+    if (isNaN(n) || n < 100 || n > 999) {
         text = "Please enter a valid answer";
     } else {
         text = "The tickets are yours! Enjoy your experience with The Breakout Zone!";
@@ -240,10 +245,7 @@ function myFunction() {
       Credit Card Number: <br><input type="text" name="vroom"><br>
     </form>
 	<br>
-    <form name="theirForm"
-      onsubmit="return validateForm()" method="post">
-      Credit Card Expiration Date (mm/yy): <br><input type="text" name="troom"><br>
-    </form>
+    CVV #:<br><input id="thumb">
 	<br>
     CVV #:<br><input id="numb"><br><br>
 
@@ -251,30 +253,6 @@ function myFunction() {
 
 <p id="demo"></p>
 </div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-  		<br>
-  		<br>
-  		<br>
-    		<br>
-  		<br>
-    		<br>
-  		<br>
-    		<br>
-  		<br>
-    		<br>
-  		<br>
-    		<br>
-  		<br>
-    		<br>
-  		<br>
-    		<br>
-	  	<br>
-    		<br>
-    		<br>
 </div>
 <script>
 function openNav() {
