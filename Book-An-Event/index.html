@@ -161,13 +161,10 @@ body, html {
   }
   function validateForm() {
       var jake = document.forms["hisForm"]["room"].value;
-      if (jake != "Race Against Time" || "Wizard Escape" || "Escape from Egypty") {
+      if (jake == "") {
           alert("Please enter a valid answer");
           return false;
       }
-	else{
-	text = <a href="https://the-breakout-zone.github.io/OfficialWebsite/index.html">"Click here to continue to the next step."</a>
-	}
   }
   $( function() {
   $( "#datepicker" ).datepicker();
@@ -190,15 +187,15 @@ function myFunction() {
 
     n = document.getElementById("numb").value;
 
-    if (isNaN(n) || n < 100 || n > 999) {
+    if (isNaN(n) || n < 1 || n > 3) {
         text = "Please enter a valid answer";
     } else {
-        text = "The tickets are yours! Enjoy your experience with The Breakout Zone!";
+        text = "nfl.com"
     }
     document.getElementById("demo").innerHTML = text;
 }
 </script>
-    <title>Book an Event</title>
+    <title>Book as Event</title>
     </head>
      <body>
 <div class="sidenav1">
@@ -222,7 +219,7 @@ function myFunction() {
 <div style="margin-left:80px">
     <form name="myForm"
       onsubmit="return validateForm()" method="post">
-      First Name: 
+      First Name:
 	    <br><input type="text" name="fname"><br>
     </form>
 	<br>
@@ -233,14 +230,11 @@ function myFunction() {
 	<br>
 	<p>Date:<br><input type="text" id="datepicker"><br></p>
 	<br>
-    <form name="hisForm"
-      onsubmit="return validateForm()" method="post">
-      Escape Room (capitalization): <br><input type="text" name="room"><br>
-    </form>
+Escape Room Option #:<br><input id="numb"><br><br>
 <br><br>
 
-<button type="button" onclick="hisForm()">Submit</button>
-<p id="demo"></p>
+<button type="button" onclick="myFunction()">Submit</button>
+<a href="#"><p id="demo"></p></a>
 <br>
 <br>
 <br>
