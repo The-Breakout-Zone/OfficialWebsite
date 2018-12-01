@@ -161,10 +161,13 @@ body, html {
   }
   function validateForm() {
       var jake = document.forms["hisForm"]["room"].value;
-      if (jake == "") {
+      if (jake != "Race Against Time" || "Wizard Escape" || "Escape from Egypty") {
           alert("Please enter a valid answer");
           return false;
       }
+	else{
+	text = <a href="https://the-breakout-zone.github.io/OfficialWebsite/index.html">"Click here to continue to the next step."</a>
+	}
   }
   $( function() {
   $( "#datepicker" ).datepicker();
@@ -195,7 +198,7 @@ function myFunction() {
     document.getElementById("demo").innerHTML = text;
 }
 </script>
-    <title>Book as Event</title>
+    <title>Book an Event</title>
     </head>
      <body>
 <div class="sidenav1">
@@ -236,7 +239,7 @@ function myFunction() {
     </form>
 <br><br>
 
-<button type="button" onclick="myFunction()">Submit</button>
+<button type="button" onclick="hisForm()">Submit</button>
 <p id="demo"></p>
 <br>
 <br>
