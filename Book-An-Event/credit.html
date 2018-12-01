@@ -188,8 +188,8 @@ function myFunction() {
 
     n = document.getElementById("numb").value;
 
-    if (isNaN(n) || n < 1 || n > 3) {
-        text = "";
+    if (isNaN(n) || n < 100 || n > 900) {
+        text = "The tickets are yours! Enjoy your time at the Breakout Zone!";
     } else {
         text = "Add your credit card information."
     }
@@ -218,20 +218,14 @@ function myFunction() {
 	<h1 style="margin-left:75px">Book an Event</h1>
 
 <div style="margin-left:80px">
-    <form name="myForm"
-      onsubmit="return validateForm()" method="post">
-      First Name:
-	    <br><input type="text" name="fname"><br>
-    </form>
-	<br>
     <form name="my1Form"
       onsubmit="return validateForm()" method="post">
-      Last Name: <br><input type="text" name="lname"><br>
+      Credit Card #: <br><input type="text" name="lname"><br>
     </form>
 	<br>
-	<p>Date:<br><input type="text" id="datepicker"><br></p>
+	<p>Credit Card Expiration Date:<br><input type="text" id="datepicker"><br></p>
 	<br>
-Escape Room Option #:<br><input id="numb"><br><br>
+CVV #:<br><input id="numb"><br><br>
 <br><br>
 
 <button type="button" onclick="myFunction()">Submit</button>
